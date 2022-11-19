@@ -1,0 +1,220 @@
+:root{
+  --primary: #2374AB;
+  --secondary: #EFCA08;
+  --accent: #138A36; 
+  --black: #001011; 
+  --white: #FFFFFC;
+  --red: #AE0E00;  
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--primary);
+}
+.App {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.headDiv{
+  background-color: var(--black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: var(--white);
+}
+.headInfo{
+  margin-top: 100px;
+  color: var(--white);
+}
+.addTaskDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent);
+  color: var(--white);
+  position: fixed; 
+  top: 300px;
+  left: 15px;
+  right: 15px; 
+  font-size: larger;
+  box-shadow: 0 0 20px var(--black);
+  border-radius: 10px;
+  transition: all 1s; 
+}
+.inputBox{
+  height: 30px;
+  border: solid 1px;
+  border-radius: 8px;
+  width: 90%;
+}
+.addTaskButton{
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 8px;
+  border: solid 3px transparent;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+.addTaskButton:hover{
+  background-color: var(--white);
+  border: solid 3px var(--secondary);
+  color: black;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--white);
+  border: solid 2px var(--black);
+  border-radius: 8px;
+  height: 50vh;
+  overflow-y: scroll;
+} 
+.itemDiv{
+  text-align: start;  
+  width: 70vw;
+}
+.timeDiv{
+  margin-left: 30px;
+}
+.listItem{
+  font-size: large;
+  color: var(--black);
+  transition: all 1s;
+}
+.strikeThrough{
+  display: flex;
+  text-decoration: line-through;
+  opacity: .5;
+  font-size: large;
+  color: var(--black);
+  transition: all 1s;
+}
+.addButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  color: var(--white);
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  box-shadow: 2px 4px 8px var(--black);
+  cursor: pointer;
+}
+.addButton:active{
+  transform: translateY(3px);
+}
+.x{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.x:hover{
+  color: var(--black);
+}
+.displayNone{
+  position: fixed; 
+  z-index: 0;
+  top: -150px;
+  left: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all 1s;
+}
+.check{
+  border: solid var(--black);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: all .5s;
+}
+.checkMark{
+  border: solid var(--primary);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--black);
+  margin: 0 10px 0 0;
+  opacity: .5;
+  cursor: pointer;
+  transition: all .5s;
+}
+.firstColor{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px; 
+  border-bottom: solid 1px var(--black);    
+  margin: 0 5px;
+}
+.secondColor{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  border-bottom: solid 1px var(--black);
+  margin: 0 5px;
+}
+.taskDiv{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+}  
+.deleteDiv{
+  z-index: 1;
+  margin-top: 10px;
+  transition: all 1s;
+} 
+.deleteBtn{
+  background-color: var(--red);
+  color: var(--white); 
+  border: solid 2px transparent;
+  border-radius: 10px;
+  padding: 10px; 
+  cursor: pointer;
+  font-size: large;
+}
+.deleteBtn:hover{
+  background-color: var(--white);
+  color: var(--black); 
+  border: solid 2px var(--red);
+}
+.iconXList{
+  color: var(--red);
+}
+.opacity{
+  opacity: .5;
+  text-decoration: line-through;
+}
+.noOpacity{
+  opacity: 1;
+}
+.top{
+  margin-top: 0;
+  transition: all 1s; 
+} 
+.bottom{
+  margin-top: 100px; 
+  transition: all 1s;
+}
+
+@media screen and (max-width: 800px) {
+  .deleteBtn{
+    font-size: x-large;
+  }
+}
